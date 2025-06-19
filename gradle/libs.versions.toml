@@ -1,0 +1,22 @@
+[versions]
+cucumber = "6.8.2"
+log4j = "2.20.0"
+junit = "4.12"
+mockito = "1.9.5"
+assertj = "2.0.0"
+antlr = "4.7.1"
+
+[libraries]
+cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumber" }
+cucumber-junit = { module = "io.cucumber:cucumber-junit", version.ref = "cucumber" }
+log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+junit = { module = "junit:junit", version.ref = "junit" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+
+[bundles]
+log4j = ['log4j-slf4j-impl', 'log4j-api']
+unit-test = ['junit', 'mockito-core', 'assertj-core']
+cucumber-test = ['cucumber-java', 'cucumber-junit']

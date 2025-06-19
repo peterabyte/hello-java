@@ -1,0 +1,40 @@
+plugins {
+  id 'antlr'
+  id 'java'
+  id 'jacoco'
+}
+
+group 'com.peterabyte'
+version '1.0.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_21
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  antlr group:'org.antlr', name:'antlr4', version:libs.versions.antlr.get()
+  implementation libs.bundles.log4j
+
+  testImplementation libs.bundles.unit.test
+  testImplementation libs.bundles.cucumber.test
+
+  runtimeOnly libs.log4j.core
+}
+
+generateGrammarSource {
+  arguments += ["-visitor"]
+}
+
+tasks.withType(JavaCompile) {
+  options.compilerArgs << '-Xlint:unchecked'
+  options.deprecation = true
+}
+
+test {
+  finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+  dependsOn test
+}
