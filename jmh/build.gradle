@@ -1,0 +1,30 @@
+plugins {
+  id 'java'
+  id "me.champeau.jmh" version "0.7.3"
+}
+
+group 'com.peterabyte'
+version '1.0.0-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation libs.bundles.log4j
+
+  testImplementation libs.bundles.unit.test
+
+  runtimeOnly libs.log4j.core
+
+  jmh group: 'org.openjdk.jmh', name: 'jmh-core', version: libs.versions.jmh.get()
+  jmh group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: libs.versions.jmh.get()
+  jmhAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: libs.versions.jmh.get()
+}
+
+tasks.withType(JavaCompile) {
+  options.compilerArgs << '-Xlint:unchecked'
+  options.deprecation = true
+}

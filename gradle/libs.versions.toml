@@ -5,6 +5,7 @@ junit = "4.12"
 mockito = "1.9.5"
 assertj = "2.0.0"
 antlr = "4.7.1"
+jmh = "1.37"
 
 [libraries]
 cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumber" }
