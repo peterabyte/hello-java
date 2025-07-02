@@ -7,7 +7,6 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        strict = true,
         plugin = {
                 "pretty",
         },

@@ -30,4 +30,8 @@ The following software should be installed on your computer.
 
 ### Testing
 
-To run the Cucumber tests just run the command `gradle --daemon test`.
+To run the Cucumber tests just run the command:
+
+* from the root folder: `gradle antlr:clean antlr:test`
+
+* from the subproject folder (`./antlr`): `gradle clean test`
