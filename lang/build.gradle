@@ -11,16 +11,6 @@ repositories {
   mavenCentral()
 }
 
-configurations {
-    implementation {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-    }
-    developmentOnly
-    runtimeClasspath {
-        extendsFrom developmentOnly
-    }
-}
-
 dependencies {
   implementation libs.bundles.log4j
 

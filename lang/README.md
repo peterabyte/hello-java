@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is simple project to track the major changes in the JAVA language versions.
+This is simple project to track major features and changes in the JAVA language versions starting from JAVA 8.
 
 ## Dependencies
 
@@ -22,4 +22,11 @@ The following software should be installed on your computer.
 
 ## JAVA versions
 
-TODO...
+### JAVA 8
+
+* **static** and **default** methods in interfaces
+* **Optional<T>**
+* **Functional interfaces**
+* **Lambda Expressions**
+* **Stream API**
+
