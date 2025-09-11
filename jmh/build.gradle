@@ -3,8 +3,8 @@ plugins {
   id "me.champeau.jmh" version "0.7.3"
 }
 
-group 'com.peterabyte'
-version '1.0.0-SNAPSHOT'
+group = 'com.peterabyte'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
   mavenCentral()
@@ -17,6 +17,8 @@ dependencies {
 
   runtimeOnly libs.log4j.core
 
+  testRuntimeOnly libs.junit.platform
+
   jmh group: 'org.openjdk.jmh', name: 'jmh-core', version: libs.versions.jmh.get()
   jmh group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: libs.versions.jmh.get()
   jmhAnnotationProcessor group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: libs.versions.jmh.get()
@@ -25,4 +27,8 @@ dependencies {
 tasks.withType(JavaCompile) {
   options.compilerArgs << '-Xlint:unchecked'
   options.deprecation = true
+}
+
+tasks.withType(Test).configureEach {
+  useJUnitPlatform()
 }

@@ -2,8 +2,8 @@ plugins {
   id 'java'
 }
 
-group 'com.peterabyte'
-version '1.0.0-SNAPSHOT'
+group = 'com.peterabyte'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
   mavenCentral()
@@ -23,7 +23,7 @@ configurations {
 
 dependencies {
   intTestImplementation libs.junit.jupiter
-  intTestRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+  intTestRuntimeOnly libs.junit.platform
 }
 
 tasks.withType(JavaCompile) {

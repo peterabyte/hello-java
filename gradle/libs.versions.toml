@@ -1,12 +1,13 @@
 [versions]
 cucumber = "6.8.2"
 log4j = "2.20.0"
-junit = "4.12"
-junit-jupiter = "5.7.1"
-mockito = "1.9.5"
+junit-jupiter = "5.13.4"
+junit-platform = "1.13.4"
+mockito = "5.19.0"
 assertj = "2.0.0"
 antlr = "4.7.1"
 jmh = "1.37"
+jakarta = "3.0.0"
 
 [libraries]
 cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumber" }
@@ -14,12 +15,14 @@ cucumber-junit = { module = "io.cucumber:cucumber-junit", version.ref = "cucumbe
 log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j" }
 log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
-junit = { module = "junit:junit", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
+junit-platform = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }
+mockito = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+jakarta-api = { module = "jakarta.annotation:jakarta.annotation-api", version.ref = "jakarta" }
 
 [bundles]
 log4j = ['log4j-slf4j-impl', 'log4j-api']
-unit-test = ['junit', 'mockito-core', 'assertj-core']
+unit-test = ['junit-jupiter', 'mockito', 'assertj-core']
 cucumber-test = ['cucumber-java', 'cucumber-junit']

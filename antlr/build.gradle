@@ -4,8 +4,8 @@ plugins {
   id 'jacoco'
 }
 
-group 'com.peterabyte'
-version '1.0.0-SNAPSHOT'
+group = 'com.peterabyte'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
   mavenCentral()

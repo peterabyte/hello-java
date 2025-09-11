@@ -2,22 +2,38 @@ plugins {
   id 'java'
 }
 
-group 'com.peterabyte'
-version '1.0.0-SNAPSHOT'
+group = 'com.peterabyte'
+version = '1.0.0-SNAPSHOT'
 
 repositories {
   mavenCentral()
 }
 
+configurations {
+  mockitoAgent
+}
+
 dependencies {
   implementation libs.bundles.log4j
+  implementation libs.jakarta.api
 
   testImplementation libs.bundles.unit.test
 
+  testRuntimeOnly libs.junit.platform
+
   runtimeOnly libs.log4j.core
+
+  mockitoAgent(libs.mockito.core) {
+    transitive = false
+  }
 }
 
 tasks.withType(JavaCompile) {
   options.compilerArgs << '-Xlint:unchecked'
   options.deprecation = true
+}
+
+tasks.withType(Test).configureEach {
+  jvmArgs += "-javaagent:${configurations.mockitoAgent.asPath}"
+  useJUnitPlatform()
 }
