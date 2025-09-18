@@ -101,7 +101,7 @@ Links:
 * **New File method**: New `mismatch` method which compare to files and finds the position of the first mismatched byte in their contents.
 * **New teeing collector**: It is a composite of two downstream collectors. Every element is processed by both collectors and their results are merged.
 * **Compact number formatting**
-* Preview changes:
+* **Preview** changes:
   * Switch expressions
   * Pattern matching for instanceof
 * JVM changes:
@@ -112,3 +112,58 @@ Links:
 Links:
 
 * https://www.baeldung.com/java-12-new-features
+
+### Java 13
+
+* **Preview** changes:
+  * Switch expressions: Using `yield` we can return values from a switch expression.
+  * Text blocks: Multi-line String.
+* **Dynamic CDS archives**: Class metadata can be shared across different JVMs to reduce startup time and memory footprint. A shared archive can be generated at the time the application is exiting. This eliminates the need for trial runs.
+* Legacy socket API reimplemented
+
+Links:
+
+* https://www.baeldung.com/java-13-new-features
+
+### Java 14
+
+* **Switch expressions**
+* **Helpful NullPointerException**: Point out what exactly was null in a given line of code.
+* **Preview** changes:
+  * Pattern matching for instanceof
+  * Text blocks
+  * Records: To reduce boilerplate code in data model POJOs.
+
+Links:
+
+* https://www.baeldung.com/java-14-new-features
+
+### Java 15
+
+* **Text blocks**
+* **Hidden classes**
+* **Preview** changes:
+  * Records
+  * Sealed classes: The aim of sealed classes is to allow individual classes to declare which types may be used as a sub-type.
+
+Links:
+
+* https://www.baeldung.com/java-15-new
+
+### Java 16
+
+* Invoke default methds from Proxy instances
+* Day Period Support
+* Add `Stream.toList` method
+* Pattern matching for instanceof
+* **Preview** features:
+  * Sealed classes
+  * Records
+* **Incubator**:
+  * Vector API
+
+Links:
+
+* https://www.baeldung.com/java-16-new-features
+
+### Java 17 (LTS)
