@@ -167,3 +167,70 @@ Links:
 * https://www.baeldung.com/java-16-new-features
 
 ### Java 17 (LTS)
+
+* Restore always-strict floating-point semantics: The dafult floating-point operations are strict or strictfp, both of which guarantee the same results from the floating-point calculations on every platform.
+* Enhanced pseudo-random number generators
+* Strongly encapsulate JDK internals
+* Remove RMI activation API
+* Deprecate the Security Manager for removal
+* Sealed classes
+* **Preview**:
+  * Pattern matching for switch
+* **Incubator**:
+  * Foreign function and memory API: The foreign function and memory API allow Java developers to access code from outside the JVM and manage memory out of the heap.
+  * Vector API
+
+Links:
+
+* https://www.baeldung.com/java-17-new-features
+* https://www.oracle.com/java/technologies/javase/17-relnote-issues.html
+
+### Java 18
+
+* UTF-8 by default: Starting with JDK 18, UTF-8 is the default charset for the Java SE APIs.
+* Simple Web Server: jwebserver, a command-line tool to start a minimal static web server
+* Reimplement Core Reflection With Method Handles
+* Internet-Address Resolution SPI: Introduce a service-provider interface (SPI) for host name and address resolution.
+* **Preview**:
+  * Pattern matching for switch
+* **Incubator**:
+  * Foreign function and memory API: The foreign function and memory API allow Java developers to access code from outside the JVM and manage memory out of the heap.
+  * Vector API
+
+Links:
+
+* https://www.oracle.com/java/technologies/javase/18-relnote-issues.html
+
+### Java 19
+
+* New Methods to Create Preallocated HashMaps and HashSets
+* Additional Date-Time Formats
+* **Preview**:
+  * Record Patterns
+  * Pattern Matching for switch
+  * Foreign Function & Memory API
+* **Incubator**:
+  * Virtual Threads: Virtual threads are lightweight threads that dramatically reduce the effort of writing, maintaining, and observing high-throughput concurrent applications.
+  * Structured Concurrency
+  * Vector API
+
+Links:
+
+* https://www.oracle.com/java/technologies/javase/19-relnote-issues.html
+
+### Java 20
+
+* **Preview**:
+  * Record Patterns
+  * Pattern Matching for switch
+  * Foreign Function & Memory API
+* **Incubator**:
+  * Scoped Values: Introduce scoped values, which enable the sharing of immutable data within and across threads. They are preferred to thread-local variables, especially when using large numbers of virtual threads.
+  * Virtual Threads
+  * Structured Concurrency
+  * Vector API
+
+Links:
+
+* https://www.baeldung.com/java-20-new-features
+* https://www.oracle.com/java/technologies/javase/20-relnote-issues.html
