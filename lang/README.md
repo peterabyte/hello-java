@@ -234,3 +234,42 @@ Links:
 
 * https://www.baeldung.com/java-20-new-features
 * https://www.oracle.com/java/technologies/javase/20-relnote-issues.html
+
+### Java 21 (LTS)
+
+* Record patterns
+* Pattern Matching for switch
+* Virtual Threads: **Virtual threads are lightweight threads with the purpose of reducing the effort of developing high-concurrent applications.** Traditional threads, also called platform threads, are thin wrappers around OS threads. One of the major issues with platform threads is that they run the code on the OS thread and capture the OS thread throughout its lifetime. There is a limit to the number of OS threads, and this creates a scalability bottleneck. Like platform threads, a virtual thread is also an instance of java.lang.Thread class, but it isn’t tied to a specific OS thread. **It runs the code on a specific OS thread but does not capture the thread for an entire lifetime.** Therefore, many virtual threads can share OS threads to run their code.
+* Sequenced Collections: Java 21 introduced three new interfaces to represent **sequenced collections, sequenced sets, and sequenced maps**. **A sequenced collection is a collection whose elements have a defined encounter order.** It has first and last elements, and the elements between them have successors and predecessors.
+* Key encapsulation mechanism API: Introduce an API for key encapsulation mechanisms (KEMs), an encryption technique for securing symmetric keys using public key cryptography.
+* **Preview**:
+  * Unnamed variables and patterns
+  * String Templates
+  * Implicitly declared classes and instance main methods
+  * Structured Concurrency
+  * Scoped Values
+  * Vector API
+
+Links:
+
+* https://www.baeldung.com/java-lts-21-new-features
+* https://www.oracle.com/java/technologies/javase/21-relnote-issues.html
+
+### Java 22
+
+* Unnamed variables and patterns
+* Foreign Function and Memory API: Introduce an API by which Java programs can interoperate with code and data outside of the Java runtime. By efficiently invoking foreign functions (i.e., code outside the JVM), and by safely accessing foreign memory (i.e., memory not managed by the JVM), the API enables Java programs to call native libraries and process native data without the brittleness and danger of JNI.
+* **Preview**:
+  * Statements before `super(...)`
+  * Stream Gatherers
+  * String Templates
+  * Implicitly declared classes and instance main methods
+  * Class-File API: Provide a standard API for parsing, generating, and transforming Java class files.
+  * Structured Concurrency
+  * Scoped Values
+  * Vector API
+
+Links:
+
+* https://www.baeldung.com/java-22-overview
+* https://www.oracle.com/java/technologies/javase/22-relnote-issues.html
