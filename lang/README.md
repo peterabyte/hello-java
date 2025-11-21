@@ -225,7 +225,7 @@ Links:
   * Pattern Matching for switch
   * Foreign Function & Memory API
 * **Incubator**:
-  * Scoped Values: Introduce scoped values, which enable the sharing of immutable data within and across threads. They are preferred to thread-local variables, especially when using large numbers of virtual threads.
+  * Scoped Values
   * Virtual Threads
   * Structured Concurrency
   * Vector API
@@ -273,3 +273,59 @@ Links:
 
 * https://www.baeldung.com/java-22-overview
 * https://www.oracle.com/java/technologies/javase/22-relnote-issues.html
+
+### Java 23
+
+* **Preview**:
+  * Primitive Types in Patterns, instanceof, and switch
+  * Module Import Declarations
+  * Flexible Constructor Bodies (statements before `super(...)` or `this(...)`)
+  * Implicitly Declared Classes and Instance Main Methods
+  * Class-File API
+  * Stream Gatherers
+  * Structured Concurrency
+  * Scoped Values
+  * Vector API
+
+* **Withdrawn**:
+  * String Templates
+
+Links:
+
+* https://www.oracle.com/java/technologies/javase/23-relnote-issues.html
+
+### Java 24
+
+* Class-File API
+* Stream Gatherers: They can transform elements to an m-to-n relationship, keep track of previously seen elements to decide on the transformation of later elements, enable parallel execution, and transform infinite streams to finite streams.
+* **Preview**:
+  * Primitive Types in Patterns, instanceof, and switch
+  * Module Import Declarations
+  * Flexible Constructor Bodies (statements before `super(...)` or `this(...)`)
+  * Implicitly Declared Classes and Instance Main Methods
+  * Scoped Values
+  * Vector API
+  * Structured Concurrency
+
+Links:
+
+* https://www.oracle.com/java/technologies/javase/24-relnote-issues.html
+* https://www.baeldung.com/java-class-file-api
+* https://www.baeldung.com/java-stream-gatherers
+
+### Java 25
+
+* Module Import Declarations
+* Compact Source Files and Instance Main Methods
+* Flexible Constructor Bodies (statements before `super(...)` or `this(...)`)
+* Scoped Values: Introduce scoped values, which enable the sharing of immutable data within and across threads. They are preferred to thread-local variables, especially when using large numbers of virtual threads. Note that when we use Scoped Value with Virtual Threads, the logic that accesses the scoped value must be wrapped inside the `ScopedValue.where(...).run(...)` scope. Submitting a task to an executor within the scope is not enough. The task itself must be created inside the scope to retain the binding.
+* **Preview**:
+  * Primitive Types in Patterns, instanceof, and switch
+  * Structured Concurrency
+  * Stable Values
+  * Vector API
+
+Links:
+
+* https://www.oracle.com/java/technologies/javase/25-relnote-issues.html
+* https://www.baeldung.com/java-25-features

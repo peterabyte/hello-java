@@ -8,6 +8,7 @@ assertj = "3.27.6"
 antlr = "4.7.1"
 jmh = "1.37"
 jakarta = "3.0.0"
+apache-commons = "3.20.0"
 
 [libraries]
 cucumber-java = { module = "io.cucumber:cucumber-java", version.ref = "cucumber" }
@@ -21,6 +22,7 @@ mockito = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
 jakarta-api = { module = "jakarta.annotation:jakarta.annotation-api", version.ref = "jakarta" }
+commons-lang = { module = "org.apache.commons:commons-lang3", version.ref = "apache-commons" }
 
 [bundles]
 log4j = ['log4j-slf4j-impl', 'log4j-api']
